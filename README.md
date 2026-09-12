@@ -8,6 +8,17 @@ Analysis code lives in a separate repository: https://github.com/Cybing521/rop-s
 
 This repository does **not** re-host fundus photographs.
 
+The twelve LODO checkpoints (`best.pth`, ~17 MB each) are GitHub Release assets, not git objects:
+
+https://github.com/Cybing521/rop-screening-artifacts/releases/tag/lodo-v2
+
+After cloning this repository, download the weights into `weights/`:
+
+```bash
+gh release download lodo-v2 --dir weights --pattern "*.pth"
+shasum -a 256 -c checksums/SHA256SUMS.txt
+```
+
 ## Contents
 
 | Path | Role |
